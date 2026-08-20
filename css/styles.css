@@ -1,0 +1,391 @@
+/* =========================
+   COLORES CST
+   ========================= */
+:root {
+    --azul-electrico: #009FE3;
+    --azul-profundo: #005FAD;
+    --negro-carbon: #0B0F14;
+    --blanco: #FFFFFF;
+    --gris-plata: #C7CCD3;
+    --gris-oscuro: #3A4452;
+}
+
+/* =========================
+   GENERAL
+   ========================= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--negro-carbon);
+    color: var(--blanco);
+    line-height: 1.6;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+header {
+    background: linear-gradient(
+        135deg,
+        var(--negro-carbon),
+        var(--azul-profundo)
+    );
+
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--azul-electrico);
+}
+
+header h1 {
+    margin: 0;
+    color: var(--blanco);
+    font-size: 2.5rem;
+}
+
+header p {
+    color: var(--gris-plata);
+    font-size: 1.1rem;
+}
+
+/* =========================
+   NAVEGACIÓN
+   ========================= */
+nav {
+    margin-top: 25px;
+}
+
+nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    margin: 0 12px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--azul-electrico);
+    color: var(--negro-carbon);
+}
+
+/* =========================
+   CONTENIDO
+   ========================= */
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: var(--azul-electrico);
+    border-left: 4px solid var(--azul-electrico);
+    padding-left: 12px;
+}
+
+h3 {
+    color: var(--blanco);
+}
+
+p {
+    color: var(--gris-plata);
+}
+
+/* =========================
+   SERVICIOS
+   ========================= */
+article {
+    background-color: #111820;
+    border: 1px solid var(--gris-oscuro);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    transition: 0.3s;
+}
+
+article:hover {
+    border-color: var(--azul-electrico);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0, 159, 227, 0.15);
+}
+
+article h3 {
+    color: var(--azul-electrico);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+footer {
+    background-color: #070A0E;
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid var(--gris-oscuro);
+}
+
+footer p {
+    margin: 5px;
+    color: var(--gris-plata);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav a {
+        display: block;
+        margin: 8px 0;
+    }
+
+    main {
+        padding: 25px 15px;
+    }
+}
+
+/* =========================
+   PÁGINA DE SERVICIOS
+   ========================= */
+
+ol {
+    list-style: none;
+    counter-reset: servicios;
+    padding: 0;
+    margin-top: 30px;
+}
+
+ol li {
+    counter-increment: servicios;
+
+    background-color: #111820;
+    border: 1px solid var(--gris-oscuro);
+    border-left: 4px solid var(--azul-electrico);
+
+    border-radius: 8px;
+
+    padding: 20px 25px;
+    margin-bottom: 20px;
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+/* Número del servicio */
+ol li::before {
+    content: counter(servicios);
+
+    position: absolute;
+    top: 20px;
+    right: 25px;
+
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--azul-profundo);
+    color: var(--blanco);
+
+    border-radius: 50%;
+
+    font-weight: bold;
+}
+
+/* Título del servicio */
+ol li h3 {
+    color: var(--azul-electrico);
+    margin-top: 0;
+    padding-right: 50px;
+}
+
+/* Descripción */
+ol li p {
+    color: var(--gris-plata);
+    margin-bottom: 0;
+}
+
+/* Efecto al pasar el mouse */
+ol li:hover {
+    border-color: var(--azul-electrico);
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 5px 20px rgba(0, 159, 227, 0.15);
+}
+
+/* Título principal de la página */
+main section > h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* Texto introductorio */
+main section > p {
+    max-width: 800px;
+}
+
+/* =========================
+   FORMULARIO DE SOLICITUD
+   ========================= */
+
+form {
+    max-width: 750px;
+    margin: 30px auto;
+    padding: 30px;
+
+    background-color: #111820;
+
+    border: 1px solid var(--gris-oscuro);
+    border-left: 4px solid var(--azul-electrico);
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Etiquetas */
+form label {
+    display: block;
+
+    color: var(--blanco);
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+/* Campos */
+form input,
+form select,
+form textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    background-color: #0B0F14;
+    color: var(--blanco);
+
+    border: 1px solid var(--gris-oscuro);
+    border-radius: 5px;
+
+    font-size: 1rem;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+/* Efecto al seleccionar un campo */
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: var(--azul-electrico);
+
+    box-shadow:
+        0 0 0 2px rgba(0, 159, 227, 0.15);
+}
+
+/* Placeholder */
+form input::placeholder,
+form textarea::placeholder {
+    color: #6f7883;
+}
+
+/* Select */
+form select {
+    cursor: pointer;
+}
+
+/* Textarea */
+form textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+/* Quitar espacios generados por <br> */
+form br {
+    display: none;
+}
+
+/* Espaciado entre campos */
+form input,
+form select,
+form textarea {
+    margin-bottom: 22px;
+}
+
+/* Botón */
+form button {
+    width: 100%;
+
+    padding: 14px;
+
+    background-color: var(--azul-electrico);
+    color: var(--negro-carbon);
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* Hover del botón */
+form button:hover {
+    background-color: var(--azul-profundo);
+    color: var(--blanco);
+
+    box-shadow:
+        0 0 15px rgba(0, 159, 227, 0.3);
+}
+
+/* =========================
+   TÍTULO DE SOLICITUD
+   ========================= */
+
+main section > h2 {
+    color: var(--azul-electrico);
+    font-size: 2rem;
+}
+
+/* Texto introductorio */
+main section > p {
+    color: var(--gris-plata);
+    max-width: 750px;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    form {
+        padding: 20px;
+        margin: 25px 0;
+    }
+
+    main section > h2 {
+        font-size: 1.6rem;
+    }
+}
