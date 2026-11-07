@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+    <title>Solicitud de Servicio - CST</title>
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Cyber Secure Technologies</h1>
+
+        <p>Protegiendo tu mundo digital.</p>
+
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="../html/servicios.html">Servicios</a>
+            <a href="../html/formulario.html">Solicitar servicio</a>
+            <a href="../html/blog.html">Blog</a>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section>
+
+            <h2>Solicitud de Servicio de Ciberseguridad</h2>
+
+            <p>
+                Complete el siguiente formulario para solicitar
+                un servicio de ciberseguridad.
+            </p>
+
+            <form action="#" method="post">
+
+                <label for="nombre">Nombre completo:</label>
+                <br>
+                <input type="text" id="nombre"name="nombre" placeholder="Ej. Gabriel García Marquez" required>
+
+                <br><br>
+
+                <label for="correo">Correo electrónico:</label>
+                <br>
+                <input type="email" id="correo" name="correo" placeholder="Ej. pedro@hotmail.com" required >
+
+                <br><br>
+
+                <label for="empresa">Empresa:</label>
+                <br>
+                <input type="text" id="empresa" name="empresa" placeholder="Ej. Cyber Secure Technologies" required >
+
+                <br><br>
+
+                <label for="telefono">Teléfono:</label>
+                <br>
+                <input type="tel" id="telefono" name="telefono" title="Ingresa 9 gitos" pattern="[0-9]{9}" placeholder="Ej. (+57) 3507845369" required >
+
+                <br><br>
+
+                <label for="sitio">Página web:</label>
+                <br>
+                <input type="url" id="sitio" name="sitio" placeholder="https://ejemplo.com">
+
+                <br><br>
+
+                <label for="servicio"> Servicio solicitado:</label>
+                <br>
+                <select id="servicio" name="servicio" required>
+
+                    <option value="">Seleccione un servicio</option>
+
+                    <option value="evaluacion_web">Evaluación de seguridad web</option>
+
+                    <option value="vulnerabilidades"> Análisis de vulnerabilidades</option>
+
+                    <option value="pentesting">Prueba de penetración</option>
+
+                    <option value="auditoria">Auditoría de software</option>
+
+                    <option value="sistemas">Análisis de sistemas</option>
+
+                    <option value="consultoria">Consultoría en ciberseguridad</option>
+
+                </select>
+
+                <br><br>
+
+                <label for="prioridad">Prioridad:</label>
+                <br>
+                <select id="prioridad" name="prioridad">
+
+                    <option value="baja">Baja</option>
+
+                    <option value="media"> Media</option>
+
+                    <option value="alta">Alta</option>
+
+                </select>
+
+                <br><br>
+
+                <label for="descripcion">Descripción de la necesidad:</label>
+                <br>
+                <textarea
+                    id="descripcion"
+                    name="descripcion"
+                    rows="6"
+                    cols="50"
+                    required
+                ></textarea>
+
+                <br><br>
+
+                <button type="submit">
+                    Enviar solicitud
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            CST - Cyber Secure Technologies
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

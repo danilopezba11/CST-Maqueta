@@ -1,0 +1,240 @@
+/* =========================
+   COLORES CST
+   ========================= */
+:root {
+    --azul-electrico: #009FE3;
+    --azul-profundo: #005FAD;
+    --negro-carbon: #0B0F14;
+    --blanco: #FFFFFF;
+    --gris-plata: #C7CCD3;
+    --gris-oscuro: #3A4452;
+}
+
+/* =========================
+   GENERAL
+   ========================= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--negro-carbon);
+    color: var(--blanco);
+    line-height: 1.6;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+header {
+    background: linear-gradient(
+        135deg,
+        var(--negro-carbon),
+        var(--azul-profundo)
+    );
+
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--azul-electrico);
+}
+
+header h1 {
+    margin: 0;
+    color: var(--blanco);
+    font-size: 2.5rem;
+}
+
+header p {
+    color: var(--gris-plata);
+    font-size: 1.1rem;
+}
+
+/* =========================
+   NAVEGACIÓN
+   ========================= */
+nav {
+    margin-top: 25px;
+}
+
+nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    margin: 0 12px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--azul-electrico);
+    color: var(--negro-carbon);
+}
+
+/* =========================
+   CONTENIDO
+   ========================= */
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: var(--azul-electrico);
+    border-left: 4px solid var(--azul-electrico);
+    padding-left: 12px;
+}
+
+h3 {
+    color: var(--blanco);
+}
+
+p {
+    color: var(--gris-plata);
+}
+
+
+/* =========================
+   CARD INFORMATIVA
+   ========================= */
+
+.info_slider {
+    position: relative;
+    min-height: 300px;
+    margin-bottom: 40px;
+}
+
+.info_card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    background: linear-gradient(
+        135deg,
+        #111820,
+        var(--azul-profundo)
+    );
+
+    border: 1px solid var(--azul-electrico);
+    border-radius: 10px;
+    padding: 30px;
+
+    box-shadow: 0 5px 20px rgba(0, 159, 227, 0.15);
+
+    opacity: 0;
+    animation: mostrarCard 30s infinite;
+}
+
+.info_card h2 {
+    color: var(--azul-electrico);
+    border-left: 4px solid var(--azul-electrico);
+    padding-left: 12px;
+}
+
+.info_card p {
+    color: var(--gris-plata);
+}
+
+
+/* =========================
+   ANIMACIÓN DE LAS CARDS
+   ========================= */
+
+.inicio {
+    animation-delay: 0s;
+}
+
+.mision {
+    animation-delay: 10s;
+}
+
+.vision {
+    animation-delay: 20s;
+}
+
+
+@keyframes mostrarCard {
+
+    0% {opacity: 0;}
+
+    5% {opacity: 1;}
+
+    28% {opacity: 1;}
+
+    33% {opacity: 0;}
+
+    100% {opacity: 0;}
+
+}
+
+
+/* =========================
+   SERVICIOS
+   ========================= */
+article {
+    background-color: #111820;
+    border: 1px solid var(--gris-oscuro);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    transition: 0.3s;
+}
+
+article:hover {
+    border-color: var(--azul-electrico);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0, 159, 227, 0.15);
+}
+
+article h3 {
+    color: var(--azul-electrico);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+footer {
+    background-color: #070A0E;
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid var(--gris-oscuro);
+}
+
+footer p {
+    margin: 5px;
+    color: var(--gris-plata);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav a {
+        display: block;
+        margin: 8px 0;
+    }
+
+    main {
+        padding: 25px 15px;
+    }
+
+    .info_slider {
+        min-height: 420px;
+    }
+
+    .info-card {
+        padding: 20px;
+    }
+}
